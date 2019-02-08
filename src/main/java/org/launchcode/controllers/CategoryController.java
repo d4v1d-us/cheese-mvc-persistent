@@ -33,6 +33,7 @@ public class CategoryController {
     public String displayAddCategoryForm(Model model) {
 
         model.addAttribute("title", "Add Category");
+        model.addAttribute("categories", categoryDao.findAll());
         model.addAttribute(new Category());
 
         return "category/add";
